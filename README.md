@@ -17,12 +17,13 @@
   bin/kafka-topics.sh --create --topic iotinputtopic --bootstrap-server localhost:29092 --group my-group-id <br/>
   bin/kafka-topics.sh --create --topic iotoutputtopic --bootstrap-server localhost:29092 <br/>
   3. Run the transaction service <br/>
-  4. mvn exec:java -Dexec.mainClass=iot.TransactionalClientDemo <br/>
+  mvn exec:java -Dexec.mainClass=iot.TransactionalClient <br/>
 
 # Pushing the messages to the topic
  bin/kafka-console-producer.sh --topic iotinputtopic --bootstrap-server localhost:29092 --property "parse.key=true" --property "key.separator=:" <br/>
 
  Example message:message <br/>
+
 
 
 
