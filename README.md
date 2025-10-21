@@ -14,7 +14,7 @@
 
   1. Start Docker containers docker-compose up -d <br/>
   2. Create the topics <br/>
-  bin/kafka-topics.sh --create --topic iotinputtopic --bootstrap-server localhost:29092 --group my-group-id <br/>
+  bin/kafka-topics.sh --create --topic iotinputtopic --bootstrap-server localhost:29092 <br/>
   bin/kafka-topics.sh --create --topic iotoutputtopic --bootstrap-server localhost:29092 <br/>
   3. Run the transaction service <br/>
   mvn exec:java -Dexec.mainClass=iot.TransactionalClient <br/>
@@ -23,6 +23,7 @@
  bin/kafka-console-producer.sh --topic iotinputtopic --bootstrap-server localhost:29092 --property "parse.key=true" --property "key.separator=:" <br/>
 
  Example message:message <br/>
+
 
 
 
